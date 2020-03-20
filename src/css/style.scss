@@ -1,0 +1,10 @@
+/* 抽离为css样式文件 通过选择器赋予样式*/
+.title{
+    color: red;
+    font-size: 18px;
+    text-align: center;
+}
+/* 配置全局类名  不被模块化*/
+:global(.test){
+    font-style: italic;
+}
