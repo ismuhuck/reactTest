@@ -10,14 +10,14 @@ export default class Counter extends React.Component{
             msg:'这是父组件的msg消息'
         }
     }
-    // 通过静态的defaultProps 属性 来这只默认的属性值
+    // 通过静态的defaultProps 属性 来使用默认的属性值
     static defaultProps = {
         initcount:0
     }
     static propTypes ={
         initcount:ReactTypes.number
     }
-    componentWillUnmount(){
+    componentWillmount(){
         // 在组件挂载到页面前 执行 此时内存中的DOM尚未开始渲染，但数据和方法已经可以正常访问
     }
     // render 函数开始渲染内存中的虚拟DOM render 执行完毕后虚拟DOM渲染完毕 但尚未挂载到页面上
@@ -49,7 +49,7 @@ export default class Counter extends React.Component{
 
     shouldComponentUpdate(nextProps,nextState){
         // 判断组件是否需要被更新 需要返回一个布尔值
-        // 当返回 false 时会退回运行中的状态 不会执行后续的生命周期 由于后续的render函数没有没调用 
+        // 当返回 false 时会退回运行中的状态 不会执行后续的生命周期 由于后续的render函数没有被调用 
         // 所以页面不会被修改 但状态值会被更改 
         // 在shouldComponentUpdate  this.state.count 为旧数据 并非当前最新值
         // if( nextState.count%2 ===0){

@@ -16,6 +16,7 @@ let firstDiv = <div>
     <Movie name={user.name}></Movie>
     {/**两种创建组件方式的区别 
      * 使用function创建的组件没有私有数据和生命周期函数 【无状态组件】 由于没有state和生命周期函数 运行效率高于 class创建的组件
+     * 当业务逻辑和UI相分离时 使用无状态组价
      * 使用class创建的组件有自己的生命周期和数据 【有状态组件】
       */}
 </div>
